@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Donatsu – donat susu empuk, manis dan lucu dari Cijerah, Cimahi Selatan.">
+  <title>Donatsu – Donat Susu Cijerah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Kursor (bisa diganti foto lewat bagian "Kursor fotomu") -->
+  <div id="cur" aria-hidden="true">🍩</div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="nav">
+      <a class="logo" href="#beranda">Donatsu 🍩</a>
+      <button class="burger" id="burger" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#pesanan">Pesanan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a class="btn btn-sm alt" href="#pesanan">Pesan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= BERANDA ================= -->
+    <section class="wrap hero" id="beranda">
+      <div>
+        <h1>Donat susu <span class="s1">empuk</span>, <span class="s2">manis</span> &amp; <span class="s3">lucu!</span></h1>
+        <p>Donatsu Cijerah, Kec. Cimahi Selatan. Donat lembut dengan topping warna-warni, cocok buat ngemil atau dikirim jadi kejutan buat si dia.</p>
+        <div class="row">
+          <a class="btn" href="#menu">Lihat menu</a>
+          <a class="btn alt" href="#pesanan">Kirim donat + pesan</a>
+        </div>
+      </div>
+      <!-- Visual hero. Mau pakai foto? Ganti isi .stage dengan:
+           <img src="assets/images/donatsu-hero.jpg" alt="Donat Donatsu"> -->
+      <div class="stage" aria-hidden="true">
+        <img src="images/logo donsu.PNG" alt="Donat Donatsu">
+        <i style="left:10%;top:14%">🍓</i><i style="right:12%;top:20%">✨</i>
+        <i style="left:14%;bottom:14%">🍫</i><i style="right:10%;bottom:16%">🌈</i>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+
+    <!-- ================= TENTANG ================= -->
+    <section id="tentang">
+      <div class="wrap about">
+        <div class="card reveal">
+          <h2>Tentang Donatsu</h2>
+          <p>Donatsu adalah donat susu dari Cijerah, Cimahi Selatan. Donatnya empuk, bertabur susu, dan hadir dalam banyak pilihan: kreasi topping warna-warni, krim susu, sampai fruity pie.</p>
+          <p>Cocok untuk teman ngopi, bekal, atau hadiah kecil. Kamu juga bisa menitipkan pesan manis yang ikut dikirim bersama donatnya.</p>
+        </div>
+        <div class="card mint reveal">
+          <div class="chips">
+            <span class="chip hot">Super Resto</span>
+            <span class="chip">⭐ 4.8 di GoFood</span>
+            <span class="chip">🍩 Donat susu</span>
+            <span class="chip">🎁 Bisa kirim kado</span>
+            <span class="chip">💌 Ada kartu pesan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENU ================= -->
+    <!--
+      FOTO PRODUK: simpan foto asli Donatsu di assets/images/ dengan nama file di tiap kartu.
+      HARGA: ubah angka pada data-price (harga dibaca dari screenshot, mohon dicek lagi).
+      Kalau foto belum ada, kartu otomatis menampilkan emoji.
+    -->
+    <section id="menu">
+      <div class="wrap">
+        <h2>Menu favorit</h2>
+        <p class="sub">Pilih jumlahnya, nanti otomatis masuk ke form pesanan.</p>
+        <div class="grid">
+          <!-- donatsu-1.jpg -->
+          <article class="card item reveal" data-name="Sharing Kreasi 6 Pcs" data-price="95000">
+            <div class="pic" style="--bg:var(--pink)"><img class="photo" src="images/donsu 1.jpeg" alt="Sharing Kreasi 6 Pcs" data-emoji="🍩"></div>
+            <span class="tag">Sharing Kreasi</span><h3>Sharing Kreasi 6 Pcs</h3>
+            <p class="desc">6 donat kreasi aneka topping, enak dibagi bareng.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-2.jpg -->
+          <article class="card item reveal" data-name="Donatsu Sharing Kreasi 1 Pcs" data-price="16000">
+            <div class="pic" style="--bg:var(--yellow)"><img class="photo" src="images/donsu 2.jpeg" alt="Donatsu Sharing Kreasi 1 Pcs" data-emoji="🍩"></div>
+            <span class="tag">Sharing Kreasi</span><h3>Donatsu Sharing Kreasi 1 Pcs</h3>
+            <p class="desc">1 donat kreasi, bebas pilih topping sesukamu.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-3.jpg -->
+          <article class="card item reveal" data-name="Kreasi 6 Pcs" data-price="70000">
+            <div class="pic" style="--bg:var(--sky)"><img class="photo" src="images/donsu 3.jpeg" alt="Kreasi 6 Pcs" data-emoji="🍓"></div>
+            <span class="tag">Kreasi</span><h3>Kreasi 6 Pcs</h3>
+            <p class="desc">Enam donat kreasi dengan topping beragam.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-4.jpg -->
+          <article class="card item reveal" data-name="Kreasi 1 Pcs" data-price="12000">
+            <div class="pic" style="--bg:var(--mint)"><img class="photo" src="images/donsu 4.jpeg" alt="Kreasi 1 Pcs" data-emoji="🍫"></div>
+            <span class="tag">Kreasi</span><h3>Kreasi 1 Pcs</h3>
+            <p class="desc">Satu donat kreasi dengan topping pilihan.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-5.jpg -->
+          <article class="card item reveal" data-name="Kreasi Donatsu x Drink Bengbeng" data-price="40000">
+            <div class="pic" style="--bg:var(--orange)"><img class="photo" src="images/donsu 5.jpeg" alt="Kreasi Donatsu x Drink Bengbeng" data-emoji="🥤"></div>
+            <span class="tag">Donatsu x Drink Bengbeng</span><h3>Kreasi Donatsu x Drink Bengbeng</h3>
+            <p class="desc">Donat kreasi (Original, Milky, Creamy) plus minuman Bengbeng.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-6.jpg -->
+          <article class="card item reveal" data-name="Creamy Donatsu x Drink Bengbeng" data-price="45000">
+            <div class="pic" style="--bg:var(--pink)"><img class="photo" src="images/donsu 6.jpeg" alt="Creamy Donatsu x Drink Bengbeng" data-emoji="🥤"></div>
+            <span class="tag">Donatsu x Drink Bengbeng</span><h3>Creamy Donatsu x Drink Bengbeng</h3>
+            <p class="desc">Donat creamy plus minuman Bengbeng.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-7.jpg -->
+          <article class="card item reveal" data-name="Donatsu Original 3 Pcs" data-price="14400">
+            <div class="pic" style="--bg:var(--mint)"><img class="photo" src="images/donsu 7.jpeg" alt="Donatsu Original 3 Pcs" data-emoji="🍩"></div>
+            <span class="tag">Donatsu Original</span><h3>Donatsu Original 3 Pcs</h3>
+            <p class="desc">Donat ring 3 pcs dengan taburan susu yang melimpah.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-8.jpg -->
+          <article class="card item reveal" data-name="Donatsu Original 10 Pcs" data-price="48000">
+            <div class="pic" style="--bg:var(--yellow)"><img class="photo" src="images/donatsu 8.jpeg" alt="Donatsu Original 10 Pcs" data-emoji="🍩"></div>
+            <span class="tag">Donatsu Original</span><h3>Donatsu Original 10 Pcs</h3>
+            <p class="desc">Donat ring 10 pcs dengan taburan susu yang melimpah.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-9.jpg -->
+          <article class="card item reveal" data-name="Donatsu Milky Cream 3 Pcs" data-price="19200">
+            <div class="pic" style="--bg:var(--sky)"><img class="photo" src="images/donsu 9.jpeg" alt="Donatsu Milky Cream 3 Pcs" data-emoji="🥛"></div>
+            <span class="tag">Donatsu Milky Cream</span><h3>Donatsu Milky Cream 3 Pcs</h3>
+            <p class="desc">Donat 3 pcs isi krim susu yang lembut dan manis.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-10.jpg -->
+          <article class="card item reveal" data-name="Donatsu Milky Cream 10 Pcs" data-price="64000">
+            <div class="pic" style="--bg:var(--pink)"><img class="photo" src="images/donsu 10.jpeg" alt="Donatsu Milky Cream 10 Pcs" data-emoji="🥛"></div>
+            <span class="tag">Donatsu Milky Cream</span><h3>Donatsu Milky Cream 10 Pcs</h3>
+            <p class="desc">Donat 10 pcs isi krim susu yang lembut dan manis.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+          <!-- donatsu-11.jpg -->
+          <article class="card item reveal" data-name="Donatsu Fruity Pie 6 Pcs" data-price="64000">
+            <div class="pic" style="--bg:var(--mint)"><img class="photo" src="images/donsu 11.jpeg" alt="Donatsu Fruity Pie 6 Pcs" data-emoji="🍒"></div>
+            <span class="tag">Donatsu Fruity Pie</span><h3>Donatsu Fruity Pie 6 Pcs</h3>
+            <p class="desc">Donat 6 pcs rasa pie buah yang segar.</p>
+            <div class="bot"><span class="price"></span><button class="btn btn-sm add" type="button">Pesan</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KEUNGGULAN ================= -->
+    <section id="keunggulan">
+      <div class="wrap">
+        <h2>Kenapa Donatsu?</h2>
+        <p class="sub">Inilah empat alasan kenapa harus memesan Donatsu yang Enak dan Lezat.</p>
+        <div class="grid">
+          <div class="card feat reveal"><div class="pic" style="--bg:var(--yellow)"><img class="photo" src="images/donsu 12.JPG" alt="Rasa susu terasa"></div><h3>Rasa susu terasa</h3><p class="desc">Taburan susu yang melimpah di tiap gigitan.</p></div>
+          <div class="card feat reveal"><div class="pic" style="--bg:var(--pink)"><img class="photo" src="images/donatsu 13.JPG" alt="Lembut & empuk"></div><h3>Lembut &amp; empuk</h3><p class="desc">Tekstur donat yang ringan dan tidak seret.</p></div>
+          <div class="card feat reveal"><div class="pic" style="--bg:var(--sky)"><img class="photo" src="images/donsu 14.JPG" alt="Topping warna-warni"></div><h3>Topping warna-warni</h3><p class="desc">Banyak pilihan kreasi yang lucu dan cantik difoto.</p></div>
+          <div class="card feat reveal"><div class="pic" style="--bg:var(--mint)"><img class="photo" src="images/donsu 15.JPG" alt="Bisa kirim kado"></div><h3>Bisa kirim kado</h3><p class="desc">Tulis pesan manis, donat dikirim ke tujuan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REVIEW ================= -->
+    <section id="review">
+      <div class="wrap">
+        <h2>Kata mereka</h2>
+        <p class="sub">Cerita nyata dari pelanggan Setia Donatsu.</p>
+        <div class="slider" id="slider">
+          <div class="track" id="track">
+            <figure class="slide"><div class="card quote"><div class="stars" aria-label="5 dari 5 bintang">★★★★★</div><blockquote>“Donatnya lembut dan susunya banyak. Enak banget!”</blockquote><figcaption>— Pelanggan Donatsu (Mutiara)</figcaption></div></figure>
+            <figure class="slide"><div class="card quote"><div class="stars" aria-label="5 dari 5 bintang">★★★★★</div><blockquote>“Dikirim jadi kejutan buat teman, kartunya bikin dia senang.”</blockquote><figcaption>— Pelanggan Donatsu (Fitri)</figcaption></div></figure>
+            <figure class="slide"><div class="card quote"><div class="stars" aria-label="5 dari 5 bintang">★★★★★</div><blockquote>“Topping warna-warninya lucu, cocok buat dibagi ke satu kantor.”</blockquote><figcaption>— Pelanggan Donatsu (Ayu)</figcaption></div></figure>
+          </div>
+          <div class="slider-ctrl">
+            <button class="round" id="prev" type="button" aria-label="Review sebelumnya">‹</button>
+            <div class="dots" id="dots"></div>
+            <button class="round" id="next" type="button" aria-label="Review berikutnya">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PESANAN ================= -->
+    <section class="order" id="pesanan">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Yuk, Nikmati Donatsu Hari Ini!</h2>
+          <!-- Link WhatsApp diatur di style.js (WA_NUMBER) -->
+          <a class="btn alt" id="waCta" href="#" target="_blank" rel="noopener">Pesan Sekarang</a>
+        </div>
+        <div class="order-grid">
+          <div>
+            <h3 class="h-white">Tulis pesanmu 💌</h3>
+            <p class="lead">Pilih donat di menu, isi nama, lalu tulis pesan manismu.</p>
+            <div class="sum" id="sum"></div>
+          </div>
+          <form id="f" novalidate>
+            <label>Nama pembeli<input type="text" id="nama" placeholder="Nama kamu" required></label>
+            <label class="check"><input type="checkbox" id="kirim"> Kirim ke orang lain (kado/kejutan)</label>
+            <div id="tujuan">
+              <label>Nama penerima<input type="text" id="penerima" placeholder="Nama tujuan"></label>
+              <label>Alamat pengiriman<textarea id="alamat" placeholder="Alamat lengkap penerima"></textarea></label>
+            </div>
+            <label>Pesan di kartu (opsional)<textarea id="pesanTxt" placeholder="Contoh: Semangat ya hari ini! 🍩"></textarea></label>
+            <button class="btn" type="submit">Pesan lewat WhatsApp</button>
+            <p class="note" id="msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section id="kontak">
+      <div class="wrap">
+        <h2>Kontak &amp; lokasi</h2>
+        <p class="sub">Informasi ini bisa untuk bertanya tentang Donsu.</p>
+        <div class="grid contact">
+          <div class="card reveal"><span class="ico">📍</span><h3>Alamat</h3><p class="desc">Cijerah, Kec. Cimahi Selatan, Kota Cimahi.  Jl. Raya Cijerah No.283, Cigondewah Kaler, Kec. Bandung Kulon, Kota Bandung, Jawa Barat 40213</p></div>
+          <div class="card reveal"><span class="ico">💬</span><h3>WhatsApp</h3><p class="desc"><a data-wa href="#" target="_blank" rel="noopener">+62 815-7283-3235</a></p></div>
+          <div class="card reveal"><span class="ico">📸</span><h3>Media sosial</h3><p class="desc"><a href="#" target="_blank" rel="noopener">Instagram donsu.indonesia</a><br><a href="#" target="_blank" rel="noopener">TikTok donsu.indonesia</a></p></div>
+          <div class="card reveal"><span class="ico">🕘</span><h3>Jam operasional</h3><p class="desc">Setiap hari<br> 09.00 – 19.30</p></div>
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div><a class="logo" href="#beranda">Donatsu 🍩</a><p>Donat susu empuk, manis &amp; lucu dari Cijerah, Cimahi Selatan.</p></div>
+      <div><h4>Navigasi</h4><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#menu">Menu</a><a href="#review">Review</a><a href="#pesanan">Pesanan</a><a href="#kontak">Kontak</a></div>
+      <div><h4>Kontak</h4><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><span>Cijerah, Cimahi Selatan</span></div>
+      <div><h4>Media sosial</h4><a href="#" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">TikTok</a></div>
+    </div>
+    <p class="copy">© <span id="year">2026</span> Donatsu. Dibuat dengan 💖 untuk pecinta donat.</p>
+  </footer>
+
+  <a class="cartbar" id="cartbar" href="#pesanan" hidden><span id="cartInfo"></span><b>Lihat pesanan</b></a>
+
+  <script src="style.js"></script>
+</body>
+</html>

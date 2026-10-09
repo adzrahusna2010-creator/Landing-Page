@@ -1,0 +1,208 @@
+/* ============ VARIABEL ============ */
+:root{
+  --pink:#ff7eb6; --yellow:#ffd93d; --mint:#5fe0c0; --sky:#6ec6ff; --orange:#ff9a52;
+  --ink:#4a2c5a; --cream:#fff8ec;
+  --nav-h:68px;
+}
+
+/* ============ RESET & DASAR ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.5}
+h1,h2,h3,h4{font-family:'Baloo 2',Nunito,sans-serif;margin:0;line-height:1.1}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:6px}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+section{padding:54px 0}
+.wrap{max-width:1020px;margin:auto;padding:0 18px}
+.sub{margin:0 0 24px}
+.note{font-size:.9rem;opacity:.85}
+:focus-visible{outline:4px solid var(--sky);outline-offset:2px}
+
+/* ============ TOMBOL ============ */
+.btn{display:inline-block;background:var(--pink);color:#fff;border:3px solid var(--ink);border-radius:999px;
+  padding:12px 24px;font:700 1rem 'Baloo 2';text-decoration:none;cursor:pointer;
+  box-shadow:0 4px 0 var(--ink);transition:transform .1s,box-shadow .1s,filter .15s}
+.btn:hover{filter:brightness(1.06);transform:translateY(-2px)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn.alt{background:var(--yellow);color:var(--ink)}
+.btn-sm{padding:7px 16px;font-size:.95rem}
+
+/* ============ NAVBAR ============ */
+.navbar{position:sticky;top:0;z-index:60;background:var(--cream);transition:box-shadow .2s,border-color .2s;border-bottom:3px solid transparent}
+.navbar.scrolled{border-color:var(--ink);box-shadow:0 4px 0 rgba(74,44,90,.15)}
+.nav{display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:auto;padding:10px 18px;min-height:var(--nav-h)}
+.logo{font:800 1.7rem 'Baloo 2';color:var(--pink);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}
+.nav-links a:not(.btn){font-weight:800;text-decoration:none;position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:4px;border-radius:4px;background:var(--pink);transition:width .2s}
+.nav-links a:not(.btn):hover::after{width:100%}
+.burger{display:none;width:46px;height:46px;border:3px solid var(--ink);border-radius:14px;background:var(--yellow);cursor:pointer;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.burger span{width:22px;height:3px;background:var(--ink);border-radius:3px;transition:transform .2s,opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding-top:24px;padding-bottom:50px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem)}
+.hero h1 span{display:inline-block;padding:0 10px;border-radius:14px;transform:rotate(-2deg)}
+.s1{background:var(--yellow)} .s2{background:var(--mint)} .s3{background:var(--sky)}
+.hero p{font-size:1.1rem;max-width:30em}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.stage{position:relative;aspect-ratio:1;background:var(--sky);border:4px solid var(--ink);
+  border-radius:46% 54% 50% 50%/50% 46% 54% 50%;display:grid;place-items:center;overflow:hidden}
+.stage img{width:100%;height:100%;object-fit:cover}
+.stage .big{font-size:min(38vw,230px);animation:bob 3s ease-in-out infinite}
+.stage i{position:absolute;font-style:normal;font-size:2rem}
+@keyframes bob{50%{transform:translateY(-14px) rotate(6deg)}}
+
+/* ============ TEKS BERJALAN ============ */
+.marquee{background:var(--ink);color:var(--yellow);font:700 1.1rem 'Baloo 2';overflow:hidden;white-space:nowrap;padding:8px 0}
+.marquee div{display:inline-block;animation:run 30s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ============ KARTU & GRID ============ */
+.card{border:3px solid var(--ink);border-radius:26px;padding:16px;background:#fff;display:flex;flex-direction:column;gap:6px;
+  transition:transform .2s,box-shadow .2s}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:18px}
+.grid .card:hover{transform:translateY(-5px) rotate(-.6deg);box-shadow:0 8px 0 var(--ink)}
+.card h3{font-size:1.2rem}
+.desc{margin:0;font-size:.88rem;opacity:.85;flex:1}
+.pic{aspect-ratio:4/3;border-radius:18px;background:var(--bg,var(--yellow));display:grid;place-items:center;overflow:hidden;border:3px solid var(--ink)}
+.photo{width:100%;height:100%;object-fit:cover}
+.emoji{font-size:3.4rem;line-height:1}
+.tag{align-self:flex-start;background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:0 10px;font-size:.75rem;font-weight:800}
+.bot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-top:6px;min-height:40px}
+.price{font:800 1.1rem 'Baloo 2'}
+.qty{display:flex;align-items:center;gap:6px;margin-left:auto}
+.qty button{width:34px;height:34px;flex:none;display:grid;place-items:center;padding:0;border-radius:50%;border:3px solid var(--ink);background:var(--yellow);
+  font:800 1.25rem/1 'Baloo 2';color:var(--ink);cursor:pointer;box-shadow:0 3px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+.qty button:hover{background:var(--pink);color:#fff}
+.qty button:active{transform:translateY(2px);box-shadow:none}
+.qty output{min-width:1.6em;text-align:center;font:800 1.05rem 'Baloo 2'}
+.bot .add{margin-left:auto}
+
+/* ============ TENTANG ============ */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch}
+.about .card{padding:24px}
+.about .card:hover{transform:none;box-shadow:none}
+.about p{margin:10px 0 0}
+.card.mint{background:var(--mint);justify-content:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#fff;border:3px solid var(--ink);border-radius:999px;padding:4px 14px;font-weight:800;font-size:.9rem}
+.chip.hot{background:var(--orange);color:#fff}
+
+/* ============ KEUNGGULAN ============ */
+#keunggulan{background:#fff;border-block:4px solid var(--ink)}
+.feat .pic{aspect-ratio:16/9}
+
+/* ============ REVIEW ============ */
+.slider{max-width:640px;margin:auto}
+.track-wrap,.slider{overflow:hidden}
+.track{display:flex;transition:transform .45s ease}
+.slide{flex:0 0 100%;margin:0;padding:6px 6px 10px}
+.quote{padding:26px;text-align:center;gap:10px}
+.quote:hover{transform:none}
+.stars{color:var(--orange);font-size:1.6rem;letter-spacing:4px}
+blockquote{margin:0;font:700 1.3rem/1.35 'Baloo 2'}
+figcaption{font-weight:800;opacity:.8}
+.slider-ctrl{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:10px}
+.round{width:44px;height:44px;border-radius:50%;border:3px solid var(--ink);background:var(--yellow);color:var(--ink);font:800 1.5rem/1 'Baloo 2';cursor:pointer;box-shadow:0 3px 0 var(--ink)}
+.round:active{transform:translateY(2px);box-shadow:none}
+.dots{display:flex;gap:8px}
+.dots button{width:14px;height:14px;border-radius:50%;border:3px solid var(--ink);background:#fff;padding:0;cursor:pointer}
+.dots button.on{background:var(--pink)}
+
+/* ============ PESANAN ============ */
+.order{background:var(--pink);border-block:4px solid var(--ink)}
+.cta{text-align:center;margin-bottom:34px}
+.cta h2{color:#fff;margin-bottom:16px}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.h-white{color:#fff;font-size:1.8rem}
+.lead{color:#fff;font-weight:800}
+form{background:#fff;border:3px solid var(--ink);border-radius:28px;padding:22px;display:grid;gap:14px}
+label{font-weight:800;display:grid;gap:5px}
+input[type=text],textarea{font:inherit;padding:11px 14px;border:3px solid var(--ink);border-radius:16px;background:var(--cream);color:var(--ink);width:100%}
+textarea{min-height:90px;resize:vertical}
+.check{display:flex;gap:10px;align-items:center;background:var(--cream);padding:10px 14px;border-radius:16px;border:3px dashed var(--ink)}
+.check input{width:22px;height:22px;accent-color:var(--pink)}
+#tujuan{display:none;gap:14px}
+#tujuan.show{display:grid}
+.sum{background:#fff;border:3px solid var(--ink);border-radius:28px;padding:20px}
+.sum ul{padding-left:18px;margin:8px 0}
+.sum .tot{font:800 1.6rem 'Baloo 2'}
+
+/* ============ KONTAK ============ */
+.contact .card{gap:4px}
+.ico{font-size:2rem}
+.contact a{font-weight:800}
+.tool{margin-top:26px;background:var(--mint);border:3px solid var(--ink);border-radius:26px;padding:18px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.tool-text{flex:1;min-width:220px}
+.tool-text .note{margin:4px 0 0}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--yellow);border-top:4px solid var(--ink);padding:40px 0 90px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+.foot-grid p{margin:8px 0 0;max-width:22em}
+.foot-grid h4{font-size:1.1rem;margin-bottom:6px}
+.foot-grid a:not(.logo),.foot-grid span{display:block;text-decoration:none;font-weight:700;margin:2px 0}
+.foot-grid a:not(.logo):hover{text-decoration:underline}
+.copy{text-align:center;font-weight:800;margin:30px 18px 0}
+
+/* ============ KURSOR ============ */
+#cur{position:fixed;left:0;top:0;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;border:3px solid var(--ink);
+  background:var(--yellow) center/cover;pointer-events:none;z-index:99;display:none;font-size:30px;text-align:center;line-height:48px;transition:transform .12s}
+#cur.on{display:block}
+#cur.press{transform:scale(.8) rotate(-12deg)}
+@media (hover:hover) and (pointer:fine){body.mycur,body.mycur *{cursor:none!important}}
+
+/* ============ BAR KERANJANG ============ */
+.cartbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;
+  display:flex;gap:18px;align-items:center;justify-content:space-between;width:min(92vw,460px);background:var(--ink);color:#fff;
+  border-radius:999px;padding:12px 22px;text-decoration:none;font-weight:800;box-shadow:0 6px 0 rgba(74,44,90,.35)}
+.cartbar b{background:var(--yellow);color:var(--ink);border-radius:999px;padding:4px 14px}
+.cartbar[hidden]{display:none}
+
+/* ============ ANIMASI MUNCUL ============ */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .hero,.about,.order-grid{grid-template-columns:1fr}
+  .burger{display:flex}
+  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);
+    border-bottom:3px solid var(--ink);padding:8px 18px 16px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links li{padding:8px 0}
+  .nav-links .btn{display:block;text-align:center}
+}
+@media (max-width:480px){
+  section{padding:40px 0}
+  .foot-grid{grid-template-columns:1fr}
+  blockquote{font-size:1.1rem}
+  .btn{padding:11px 20px}
+}
+@media (max-width:360px){
+  .logo{font-size:1.45rem}
+  .row .btn{width:100%;text-align:center}
+}
+/* Teks berjalan & donat tetap bergerak; hanya animasi muncul yang dimatikan bila perangkat meminta */
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .track{transition:none}
+}
+
+/* ============ TAMBAHAN: menu aktif & notifikasi ============ */
+.nav-links a.active::after{width:100%}
+.toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:70;
+  background:var(--yellow);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:8px 18px;font-weight:800;
+  max-width:90vw;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 4px 0 var(--ink)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
